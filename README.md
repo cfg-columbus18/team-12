@@ -106,5 +106,5 @@ struct Refugee {
 ```
 
 ## Alternate Mentor/Mentee Matching Algorithm
-* A second mentor/mentee matching algorithm has been implemented in the Matching-Algorithm branch. This algorithm treats the matching process as a multi-objective optimization problem. The algorithm does not require the user to indicate the strength of their preferences, eliminating the need for the user to choose ordinal parameters.
+* A second mentor/mentee matching algorithm has been implemented in the Matching-Algorithm branch. This algorithm treats the matching process as a multi-objective optimization problem and finds potential mentors for mentees by finding Pareto-optimal fronts. The algorithm does not require the user to indicate the strength of their preferences, eliminating the need for the user to choose ordinal parameters.
 * This algorithm is derived from the multi-objective genetic algorithm NSGA-II.
