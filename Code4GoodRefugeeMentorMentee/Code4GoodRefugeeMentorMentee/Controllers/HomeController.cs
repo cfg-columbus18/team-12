@@ -15,23 +15,60 @@ namespace Code4GoodRefugeeMentorMentee.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult SignUp()
         {
             ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult TeacherSignUp()
         {
             ViewData["Message"] = "Your contact page.";
 
             return View();
         }
 
-        public IActionResult Error()
+        public IActionResult StudentSignUp()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Dashboard()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult SearchPage()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult SearchResults()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult ViewProfile()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult EditDashboard()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
         }
     }
 }
