@@ -1,0 +1,214 @@
+DASHBOARD
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: ${Name}</label><br />
+        <label>Phone Number: ${PhoneNumber}</label><br />
+        <label>Email: ${Email}</label><br />
+        <label>Country: ${Country}<input /></label><br />
+        <label>State/Province: ${StateProv}</label><br />
+        <label>City: ${City}</label><br />
+        <label>Languages: ${Language}</label><br />
+        <label>Preferred Communication Methods: ${CommMethod}</label><br />
+    </div>
+
+    @if (@*They are a student*@)
+    {
+        <div class="item-middle">
+            <label>Sponsorship Stage: ${Stage}</label><br />
+            <label>Bio: ${Bio}</label><br />
+            <label>Have you had previous experience? ${PrevEx}</label><br />
+        </div>
+    }
+    
+    @if (@*They are a teacher*@)
+    {
+        <div class="item-middle">
+            <label>Years of Experience: ${YearsEx}</label><br />
+            <label>Bio: ${Bio}</label><br />
+            <label>Why do you want to be a mentor: ${WhyMentor}</label><br />
+            <label>Number of Refugees Sponsored: ${NumbSponsor}</label><br />
+        </div>
+    }
+
+        <div class="item-right">
+            <label>Refuge Country: <input /></label><br />
+            <label>Refuge Language: <input /></label><br />
+            <label>Refuge Reason: <input /></label><br />
+        </div>
+    </div>
+
+EDITDASHBOARD
+@if (@*They are a student*@)
+{
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country:<input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle">
+        <label>Sponsorship Stage: <input /></label><br />
+        <label>Bio: <input /></label><br />
+        <label>Have you had previous experience? </label><br /> @*This will be a dropdown or a radio button*@
+    </div>
+    <div class="item-right">
+        <button type="submit">Submit</button>
+    </div>
+</div>
+}
+
+@if (@*They are a teacher*@)
+{
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country:<input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle">
+        <label>Years of Experience: <input /></label><br />
+        <label>Bio: <input /></label><br />
+        <label>Why do you want to be a mentor: <input /></label><br />
+        <label>Number of Refugees Sponsored: <input /></label><br />
+    </div>
+    <div class="item-right">
+        <button type="submit">Submit</button>
+    </div>
+</div>
+}
+
+INDEX/LOGIN
+<div>
+    <label>Username: <input /></label>
+    <label>Password: <input /></label>
+    <button type="submit">Submit</button>
+    <a href="">Sign up</a>
+</div>
+
+SEARCHPAGE
+<div>
+    <label>Language: </label>
+    <label>Country: <input /></label>
+    <label>Refuge Country: <input /></label>
+    <label>Preferred Years of Experience: <input /></label>
+    <label>What do you want advice in? </label>
+</div>
+<div>
+    <button type="Submit">Submit</button>
+</div>
+
+SEARCHRESULTS
+<div>
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Percent Match</th>
+            <th>Profile</th>
+        </tr>
+        @*Need to do a repeater for this*@
+        <tr>
+            <th>${Name}</th>
+            <th>${Country}</th>
+            <th>${PercentMatch}</th>
+            <th><a href="">Request Mentor</a></th>
+        </tr>
+    </table>
+</div>
+
+SIGNUP
+<div>
+    <h1 style="width: 100%; text-align: center">Are you signing up as a mentor or mentee?</h1>
+</div>
+<div style="padding: 40px;display: grid; grid-template-columns: 1fr 1fr; grid-template-areas:'item-left item-right'">
+    <div class="item-left" style="text-align: center">
+        <a href="" style="font-size: 60px">Teacher</a>
+    </div>
+    <div class="item-right" style="text-align: center">
+        <a href="" style="font-size: 60px">Student</a>
+    </div>
+</div>
+
+STUDENTSIGNUP
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left" style="padding: 10px; text-align: right">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country:<input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle" style="padding: 10px; text-align: center">
+        <label>Sponsorship Stage: <input /></label><br />
+        <label>Bio: <textarea name="Text1" cols="40" rows="5"></textarea></label><br />
+        <label>Have you had previous experience? </label><br /> @*This will be a dropdown or a radio button*@
+    </div>
+    <div class="item-right" style="padding: 10px; text-align: center">
+        <label>Refuge Country: <input /></label><br />
+        <label>Refuge Language: <input /></label><br />
+        <label>Refuge Reason: <input /></label><br />
+        <button type="submit">Submit</button>
+    </div>
+</div>
+
+TEACHERSIGNUP
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left" style="padding: 10px; text-align: right">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country: <input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle" style="padding: 10px; text-align: center">
+        <label>Years of Experience: <input /></label><br />
+        <label>Bio: <textarea name="Text1" cols="40" rows="5"></textarea></label><br />
+        <label>Why do you want to be a mentor: <input /></label><br />
+        <label>Number of Refugees Sponsored: <input /></label><br />
+    </div>
+    <div class="item-right" style="padding: 10px; text-align: center">
+        <label>What areas can you advise in? <input /></label><br />
+        <label>Refuge Country: <input /></label><br />
+        <label>Refuge Language: <input /></label><br />
+        <label>Refuge Reason: <input /></label><br />
+        <button type="submit">Submit</button>
+    </div>
+</div>
+
+VIEWPROFILE
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country:<input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Timezone: </label><br /> @*This will be a dropdown*@
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle">
+        <label>Years of Experience: </label>
+        <label>Bio: </label>
+    </div>
+    <div class="item-right">
+        <button>Request Contact</button>
+    </div>
+</div>
