@@ -78,7 +78,7 @@ vector<Mentor> best_search(int language_pref, int location_pref, int refugee_pre
      return best_search;
  }         
 ```
-## Mentor Schema
+## Data Schema
 ```c++
 struct Mentor {
       string FirstName;
