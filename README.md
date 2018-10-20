@@ -3,10 +3,10 @@
 *Web Application to smartly match mentors and mentees by user selected preferences
 * Django Framework
 * Easy extensions ready for future implementation
---* App forum/chatting
---* Provide more support for extra matching criteria
---* Multilingual support
---* Automatic Verification of Mentors
+  1. App forum/chatting
+  2. Provide more support for extra matching criteria
+  3. Multilingual support
+  4. Automatic Verification of Mentors
 ## Mentor/Mentee Matching Algorithm
 * Implemented with input from Mentee's profile and custom selected input from mentee side to display smart and user friendly matching
 ```
