@@ -20,7 +20,7 @@ Input:
       Requested Specialty of Mentee (ex. General, Housing, Finance, Friends)
       
 Output:
-      List of Mentees ranked from greatest to least in match     
+      Set of Mentees ranked from greatest to least in match     
 ```
 
 * Very easy extensions ready for implementation including a in app forum/chatting
