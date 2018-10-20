@@ -1,0 +1,35 @@
+(% extends 'templates/Layout.html' %)
+(% block content %)
+
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: {{student.firstName}} {{student.lastName}}</label><br />
+        <label>Phone Number: {{student.phoneNumber}}</label><br />
+        <label>Email: {{student.email}}</label><br />
+        <label>Country: {{student.country}}<input /></label><br />
+        <label>State/Province: {{student.state}}</label><br />
+        <label>City: {{student.city}}</label><br />
+        <label>Languages: {{student.language}}</label><br />
+        <label>Preferred Communication Methods: {{commPref}} </label><br /> <!--Need to check if the others are null-->
+    </div>
+
+    @if (@*They are a student*@)
+    {
+    <div class="item-middle">
+        <label>Bio: {{student.bio}}</label><br />
+    </div>
+    }
+
+    @if (@*They are a teacher*@)
+    {
+    <div class="item-middle">
+        <label>Bio: {{student.bio}}</label><br />
+    </div>
+    }
+
+    <div class="item-right">
+        <label>Refuge Region: {{student.ref_Region}}</label><br />
+        <label>Refuge Language: {{student.ref_language}}</label><br />
+        <label>Refuge Reason: {{student.ref_reason}}</label><br />
+    </div>
+</div>

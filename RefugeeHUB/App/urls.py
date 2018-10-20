@@ -20,5 +20,5 @@ from C4G import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', views.index),
-    path('student/', views.getStudent)
+    path('student/{id}', views.getStudent)
 ]
