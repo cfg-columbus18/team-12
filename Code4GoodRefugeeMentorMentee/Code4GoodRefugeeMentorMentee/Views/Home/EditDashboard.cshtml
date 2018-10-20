@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+@if (@*They are a student*@)
+{
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country:<input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle">
+        <label>Sponsorship Stage: <input /></label><br />
+        <label>Bio: <input /></label><br />
+        <label>Have you had previous experience? </label><br /> @*This will be a dropdown or a radio button*@
+    </div>
+    <div class="item-right">
+        <button type="submit">Submit</button>
+    </div>
+</div>
+}
+
+@if (@*They are a teacher*@)
+{
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country:<input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle">
+        <label>Years of Experience: <input /></label><br />
+        <label>Bio: <input /></label><br />
+        <label>Why do you want to be a mentor: <input /></label><br />
+        <label>Number of Refugees Sponsored: <input /></label><br />
+    </div>
+    <div class="item-right">
+        <button type="submit">Submit</button>
+    </div>
+</div>
+}

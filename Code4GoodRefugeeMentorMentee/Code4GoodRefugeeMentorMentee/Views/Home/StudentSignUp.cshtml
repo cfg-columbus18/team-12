@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left" style="padding: 10px; text-align: right">
+        <label>Name: <input /></label><br />
+        <label>Phone Number: <input /></label><br />
+        <label>Email: <input /></label><br />
+        <label>Country:<input /></label><br />
+        <label>State/Province: <input /></label><br />
+        <label>City: <input /></label><br />
+        <label>Languages: </label><br /> @*This will be a dropdown*@
+        <label>Preferred Communication Methods: <input /></label><br />
+    </div>
+    <div class="item-middle" style="padding: 10px; text-align: center">
+        <label>Sponsorship Stage: <input /></label><br />
+        <label>Bio: <textarea name="Text1" cols="40" rows="5"></textarea></label><br />
+        <label>Have you had previous experience? </label><br /> @*This will be a dropdown or a radio button*@
+    </div>
+    <div class="item-right" style="padding: 10px; text-align: center">
+        <label>Refuge Country: <input /></label><br />
+        <label>Refuge Language: <input /></label><br />
+        <label>Refuge Reason: <input /></label><br />
+        <button type="submit">Submit</button>
+    </div>
+</div>

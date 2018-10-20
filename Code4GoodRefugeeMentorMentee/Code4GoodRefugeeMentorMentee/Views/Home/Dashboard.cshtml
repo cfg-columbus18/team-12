@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<div style="padding-top: 20px; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas:'item-left item-middle item-right'">
+    <div class="item-left">
+        <label>Name: ${Name}</label><br />
+        <label>Phone Number: ${PhoneNumber}</label><br />
+        <label>Email: ${Email}</label><br />
+        <label>Country: ${Country}<input /></label><br />
+        <label>State/Province: ${StateProv}</label><br />
+        <label>City: ${City}</label><br />
+        <label>Languages: ${Language}</label><br />
+        <label>Preferred Communication Methods: ${CommMethod}</label><br />
+    </div>
+
+    <div class="item-middle">
+        <label>Sponsorship Stage: ${Stage}</label><br />
+        <label>Bio: ${Bio}</label><br />
+        <label>Have you had previous experience? ${PrevEx}</label><br />
+    </div>
+
+    <div class="item-right">
+        <button>Search</button>
+    </div>
+</div>
+    
+    
