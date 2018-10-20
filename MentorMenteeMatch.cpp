@@ -4,7 +4,6 @@
 #include <string>
 #include <map>
 #include <sstream>
-#include "csvstream.h"
 
 using namespace std;
 
@@ -87,6 +86,7 @@ void new_user(Mentee &mentee) {
     cout << "Refugee Language: ";
     cin >> ref_language;
     mentee.ref_language = ref_language;
+    cout << endl;
 }
 
 
@@ -108,6 +108,7 @@ void do_search(vector<Mentor> &mentors, Mentee &mentee) {
     cout << "% ";
     string advice;
     cin >> advice;
+    cout << endl;
     
     vector<string> advice_words;
     string to_push;
@@ -203,29 +204,47 @@ void add_person(string first, string last, string phone, string email, string bi
 
 void populate_database(vector<Mentor> &mentors) {
     vector<string> special = {"General", "Friends"};
-    add_person("Bob", "Billy", "3845642", "bob@gmail.com", "Hello !", "English", "Email", "Spanish", "Toronto", "Ontario", "Canada", mentors, special);
+    add_person("Bob", "Billy", "(384) 345-5642", "bob@gmail.com", "Hello !", "English", "Email", "Spanish", "Toronto", "Ontario", "Canada", mentors, special);
     special = {"Entertainment, Banking"};
-    add_person("Joshua", "Lativski", "2674569856", "josh@gmail.com", "Hello", "English", "Skype", "Spanish", "Toronto", "Ontario", "Canada", mentors, special);
+    add_person("Joshua", "Lativski", "(267)456-9856", "josh@gmail.com", "Hello", "English", "Skype", "Spanish", "Toronto", "Ontario", "Canada", mentors, special);
     special = {"Banking, Housing"};
-    add_person("Dimna", "Latviski", "2679581309", "dima@hotmail.com", "Hello", "English", "Skype", "Spanish", "Iowa", "Ontario", "Canada", mentors, special);
+    add_person("Dimna", "Latviski", "(267)958-1309", "dima@hotmail.com", "Hello", "English", "Skype", "Spanish", "Iowa", "Ontario", "Canada", mentors, special);
     add_person("Jika", "Krytoi", "2764789843", "krutoi@comcast.net", "Hey", "Spanish", "Phone", "English", "Toronto", "Ontario", "Canada", mentors, special);
     special = {"Healthcare, Faith"};
-    add_person("Denis", "Berzuk", "2674381895", "jake@gmail.com", "HiThere", "English", "Email", "Spanish", "Dorval", "Quebec", "Canada", mentors, special);
-    add_person("Roma", "Janik", "2648914602", "rjanik@gmail.com", "Hello", "English", "Phone", "Spanish", "Beloeil", "Quebec", "Canada", mentors, special);
+    add_person("Denis", "Berzuk", "(267)438-1895", "jake@gmail.com", "HiThere", "English", "Email", "Spanish", "Dorval", "Quebec", "Canada", mentors, special);
+    add_person("Roma", "Janik", "(264)891-4602", "rjanik@gmail.com", "Hello", "English", "Phone", "Spanish", "Beloeil", "Quebec", "Canada", mentors, special);
     special = {"Entertainment, General"};
-    add_person("Vadim", "Bando", "2674984901", "bando@gmail.com", "Hi", "Spanish", "Email", "Spanish", "Laval", "Quebec", "Canada", mentors, special);
-    add_person("Salizo", "Metallo", "4679759045", "zalizko@hotmail.com", "There", "Spanish", "Chat", "English", "Brooks", "Alberta", "Canada", mentors, special);
+    add_person("Vadim", "Bando", "(267)498-4901", "bando@gmail.com", "Hi", "Spanish", "Email", "Spanish", "Laval", "Quebec", "Canada", mentors, special);
+    add_person("Salizo", "Metallo", "(467)975-9045", "zalizko@hotmail.com", "There", "Spanish", "Chat", "English", "Brooks", "Alberta", "Canada", mentors, special);
     special = {"Friends, Housing"};
-    add_person("Bobik", "Tormozik", "2569584091", "tormozik@gmail.com", "Hello", "English", "Phone", "Spanish", "Estevan", "Saskawatchewan", "Canada", mentors, special);
-    add_person("Jika", "Jonski", "56489412650", "jonski@comcast.net", "Hey", "Spanish", "Email", "English", "Dawson", "Yukon", "Canada", mentors, special);
+    add_person("Bobik", "Tormozik", "(256)958-4091", "tormozik@gmail.com", "Hello", "English", "Phone", "Spanish", "Estevan", "Saskawatchewan", "Canada", mentors, special);
+    add_person("Jika", "Jonski", "(564)894-1265", "jonski@comcast.net", "Hey", "Spanish", "Email", "English", "Dawson", "Yukon", "Canada", mentors, special);
     special = {"Employement, Genera"};
-    add_person("Jukowsky", "Ganis", "8659483027", "jenis@hotmail.com", "Hello", "English", "Phone", "English", "Barrie", "Ontario", "Canada", mentors, special);
-    add_person("Valeria", "Kudovska", "5783281957", "dima@rublovka.com", "Hey", "Spanish", "Phone", "English", "Brooks", "ALberta", "Canada", mentors, special);
+    add_person("Jukowsky", "Ganis", "(865)948-3027", "jenis@hotmail.com", "Hello", "English", "Phone", "English", "Barrie", "Ontario", "Canada", mentors, special);
+    add_person("Valeria", "Kudovska", "(578)328-1957", "dima@rublovka.com", "Hey", "Spanish", "Phone", "English", "Brooks", "ALberta", "Canada", mentors, special);
     special = {"Healthcare, Entertainment"};
-    add_person("Bobik", "Krytoi", "6580913758", "bobchik@gmail.com", "Hello", "Spanish", "Email", "English", "Dorval", "Quebec", "Canada", mentors, special);
-    add_person("Vadim", "Jenis", "5679013", "vadimchik@gmail.com", "Hey", "English", "Phone", "Spanish", "Chatham", "Ontario", "Canada", mentors, special);
-    
-    
+    add_person("Bobik", "Krytoi", "(658)091-3758", "bobchik@gmail.com", "Hello", "Spanish", "Email", "English", "Dorval", "Quebec", "Canada", mentors, special);
+    add_person("Vadim", "Jenis", "(567)745-9013", "vadimchik@gmail.com", "Hey", "English", "Phone", "Spanish", "Chatham", "Ontario", "Canada", mentors, special);
+    add_person("Joshua", "Lativski", "(267)456-9856", "josh@gmail.com", "Hello", "English", "Skype", "Spanish", "Toronto", "Ontario", "Canada", mentors, special);
+    special = {"Banking, Housing"};
+    add_person("Dimna", "Latviski", "(267)958-1309", "dima@hotmail.com", "Hello", "English", "Skype", "Spanish", "Iowa", "Ontario", "Canada", mentors, special);
+    add_person("Jika", "Krytoi", "(276)478-9843", "krutoi@comcast.net", "Hey", "Spanish", "Phone", "English", "Toronto", "Ontario", "Canada", mentors, special);
+    special = {"Healthcare, Faith"};
+    add_person("Denis", "Berzuk", "(267)438-1895", "jake@gmail.com", "HiThere", "English", "Email", "Spanish", "Dorval", "Quebec", "Canada", mentors, special);
+    add_person("Roma", "Janik", "(264)891-4602", "rjanik@gmail.com", "Hello", "English", "Phone", "Spanish", "Beloeil", "Quebec", "Canada", mentors, special);
+    special = {"Entertainment, General"};
+    add_person("Vadim", "Bando", "(267)498-4901", "bando@gmail.com", "Hi", "Spanish", "Email", "Spanish", "Laval", "Quebec", "Canada", mentors, special);
+    add_person("Salizo", "Metallo", "(467)975-9045", "zalizko@hotmail.com", "There", "Spanish", "Chat", "English", "Brooks", "Alberta", "Canada", mentors, special);
+    special = {"Friends, Employment"};
+    add_person("Bobik", "Tormozik", "(256)958-4091", "tormozik@gmail.com", "Hello", "English", "Phone", "Spanish", "Estevan", "Saskawatchewan", "Canada", mentors, special);
+    add_person("Jika", "Jonski", "(564)894-1260", "jonski@comcast.net", "Hey", "Spanish", "Email", "English", "Dawson", "Yukon", "Canada", mentors, special);
+    special = {"Employement, Genera"};
+    add_person("Jukowsky", "Ganis", "(865)948-3027", "jenis@hotmail.com", "Hello", "English", "Phone", "English", "Barrie", "Ontario", "Canada", mentors, special);
+    add_person("Valeria", "Kudovska", "(578)328-1957", "dima@rublovka.com", "Hey", "Spanish", "Phone", "English", "Brooks", "ALberta", "Canada", mentors, special);
+    special = {"Healthcare, Entertainment"};
+    add_person("Bobik", "Krytoi", "(658)091-3758", "bobchik@gmail.com", "Hello", "Spanish", "Email", "English", "Dorval", "Quebec", "Canada", mentors, special);
+    special = {"Banking"};
+    add_person("Vadim", "Jenis", "(567)345-9013", "vadimchik@gmail.com", "Hey", "English", "Phone", "Spanish", "Chatham", "Ontario", "Canada", mentors, special);
 }
 
 
@@ -259,6 +278,7 @@ int main() {
     while (cin >> num && num != 2) {
         cout << endl;
         do_search(mentors, mentee);
+        cout << endl;
         cout << "1: To do a search" << endl;
         cout << "2: To exit" << endl;
         cout << "% ";
