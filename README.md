@@ -96,13 +96,13 @@ struct Location {
       string city;
       string state;
       string country;
-}
+};
 
 struct Refugee {
       string refugee_origin;
       string refugee_language;
       string refugee_ReasonForRelocation
-}
+};
 ```
 
 ## Alternate Mentor/Mentee Matching Algorithm
