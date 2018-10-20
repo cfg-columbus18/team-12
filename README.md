@@ -8,7 +8,7 @@
       - Multilingual support
       - Automatic Verification of Mentors
 ## Mentor/Mentee Matching Algorithm
-* implemented with input from initial user profile and custom selected input from mentee side to display smart and user friendly matching
+* Implemented with input from Mentee's profile and custom selected input from mentee side to display smart and user friendly matching
 ```
 Input:
       Mentee information
